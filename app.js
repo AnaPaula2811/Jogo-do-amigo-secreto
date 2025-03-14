@@ -10,7 +10,7 @@ function adicionarAmigo(){
     let nomeAmigo = inputAmigo.value;
 
     if (!nomeAmigo) {
-        exibirTextoNaTela("h2", "Ops! faltou digitar o nome do amigo secreto!");
+        exibirTextoNaTela("h2", "Ops! Faltou digitar o nome do amigo secreto!");
         return;
     }
     
@@ -33,7 +33,9 @@ function adicionarAmigo(){
     }
     function sortearAmigo() {
          if (amigos.length === 0) {
-            alert ("Digite o nome de um amigo!");
+             exibirTextoNaTela("h2", "Ops! Faltou digitar o nome do amigo secreto!");
+             return;
+
          }
 
          let sorteado = amigos[Math.floor(Math.random() * amigos.length)];
